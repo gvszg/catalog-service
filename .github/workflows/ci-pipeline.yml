@@ -14,5 +14,5 @@ jobs:
           java-version: 11
       - name: Build and test application
         run: |
-          chmod +x mvnw
-          ./mvnw clean package
+          chmod +x gradlew
+          ./gradlew build
