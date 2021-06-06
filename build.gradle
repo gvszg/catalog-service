@@ -46,6 +46,11 @@ dependencyManagement {
 	}
 }
 
+bootBuildImage {
+	imageName = "cloudshiba/${project.name}:${project.version}"
+	environment = ["BP_JVM_VERSION": "11.*"]
+}
+
 test {
 	useJUnitPlatform()
 }
