@@ -20,7 +20,7 @@ class BookControllerIntegrationTests {
 
     @Test
     void whenPostRequestThenBookCreated() {
-        Book expectedBook = new Book("1231231231", "Title", "Author", Year.of(1991), 9.90);
+        Book expectedBook = new Book("1231231231", "Title", "Author", Year.of(1991), 9.90, "Polar");
 
         ResponseEntity<Book> response = restTemplate.postForEntity("/books", expectedBook, Book.class);
 

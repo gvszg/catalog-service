@@ -26,7 +26,7 @@ public class BookRepositoryJpaTests {
     @Test
     void findBookByIsbnWhenExisting() {
         String bookIsbn = "1234561235";
-        Book expectedBook = new Book(bookIsbn, "Title", "Author", Year.of(2000), 12.90);
+        Book expectedBook = new Book(bookIsbn, "Title", "Author", Year.of(2000), 12.90, "Polar");
         entityManager.persist(expectedBook);
 
         Optional<Book> actualBook = bookRepository.findByIsbn(bookIsbn);
