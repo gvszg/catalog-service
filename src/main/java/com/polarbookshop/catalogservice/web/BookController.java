@@ -13,6 +13,7 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class BookController {
     private final BookService bookService;
+
     @GetMapping
     public Iterable<Book> get() {
         return bookService.viewBookList();

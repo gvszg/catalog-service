@@ -3,7 +3,6 @@ package com.polarbookshop.catalogservice.domain;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -11,7 +10,7 @@ import java.util.Optional;
 public class BookService {
     private final BookRepository bookRepository;
 
-    public Collection<Book> viewBookList() {
+    public Iterable<Book> viewBookList() {
         return bookRepository.findAll();
     }
 

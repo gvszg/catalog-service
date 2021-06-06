@@ -21,6 +21,16 @@ spring:
         max-interval: 2000 # 2s
         multiplier: 1.1
   profiles.active: test-data
+  datasource:
+    username: root
+    password: 12345678
+    url: jdbc:postgresql://localhost:5432/polardb_catalog
+    hikari:
+      connection-timeout: 5000 #ms
+      maximum-pool-size: 20
+      pool-name: polardb-catalog-pool
+  jpa:
+    hibernate.ddl-auto: validate
 
 management.endpoints.web.exposure.include: refresh
 
